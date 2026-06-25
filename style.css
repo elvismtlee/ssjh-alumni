@@ -457,6 +457,115 @@ body {
   color: rgba(255,255,255,0.4);
 }
 
+/* ===== OFFICERS ===== */
+.officers-block {
+  margin-top: 3rem;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+.officers-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.officers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.officer-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+.officer-card.highlight {
+  border: 1px dashed var(--border);
+  opacity: .65;
+}
+.officer-role { font-size: .78rem; color: var(--text-light); margin-bottom: .4rem; letter-spacing: .05em; }
+.officer-name { font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: .4rem; }
+.officer-note { font-size: .8rem; color: var(--text-light); }
+
+/* ===== MORE ACTIVITIES ===== */
+.more-activities {
+  text-align: center;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.more-activities p { color: var(--text-light); font-size: .95rem; }
+
+/* ===== SCHOLARSHIP ===== */
+.scholarship-block {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.scholarship-text h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: .75rem;
+}
+.scholarship-text p { font-size: .95rem; color: var(--text-light); line-height: 1.8; }
+.support-list { list-style: none; }
+.support-list li { padding: .4rem 0; font-size: .95rem; color: var(--text); }
+.scholarship-img-placeholder {
+  background: var(--primary);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  min-height: 240px;
+}
+.img-placeholder-inner {
+  text-align: center;
+  color: #fff;
+}
+.img-placeholder-inner span { font-size: 3rem; display: block; margin-bottom: .75rem; }
+.img-placeholder-inner p { font-size: 1rem; font-weight: 600; line-height: 1.6; margin-bottom: .4rem; }
+.img-placeholder-inner small { opacity: .7; font-size: .82rem; }
+
+/* ===== JOIN METHODS ===== */
+.join-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.join-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+.join-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.join-card h3 { font-size: 1.1rem; margin-bottom: .75rem; color: #fff; }
+.join-card p { font-size: .88rem; color: rgba(255,255,255,0.8); line-height: 1.75; }
+.qr-placeholder {
+  margin-top: 1rem;
+  background: rgba(255,255,255,0.15);
+  border: 1px dashed rgba(255,255,255,0.4);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: .85rem;
+  color: rgba(255,255,255,0.7);
+}
+.qr-placeholder small { display: block; margin-top: .4rem; font-size: .75rem; opacity: .7; }
+.join-note {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: .88rem;
+}
+
 /* ===== RWD ===== */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: repeat(2, 1fr); }
