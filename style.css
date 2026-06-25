@@ -532,6 +532,35 @@ body {
 .img-placeholder-inner p { font-size: 1rem; font-weight: 600; line-height: 1.6; margin-bottom: .4rem; }
 .img-placeholder-inner small { opacity: .7; font-size: .82rem; }
 
+/* ===== NOTABLE ALUMNI ===== */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.alumni-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  transition: all .3s;
+}
+.alumni-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.alumni-class {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .2rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .75rem;
+  letter-spacing: .05em;
+}
+.alumni-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: .6rem; }
+.alumni-card p { font-size: .87rem; color: var(--text-light); line-height: 1.75; }
+
 /* ===== JOIN METHODS ===== */
 .join-methods {
   display: grid;
