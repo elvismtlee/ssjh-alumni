@@ -627,31 +627,165 @@ body {
   font-size: .88rem;
 }
 
-/* ===== RWD ===== */
+/* ===== RWD — 平板 ===== */
 @media (max-width: 900px) {
+  .section { padding: 4rem 0; }
   .about-grid { grid-template-columns: repeat(2, 1fr); }
   .stats .container { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
   .news-grid { grid-template-columns: 1fr; }
+  .alumni-grid { grid-template-columns: repeat(2, 1fr); }
+  .officers-grid { grid-template-columns: repeat(2, 1fr); }
+  .join-methods { grid-template-columns: repeat(2, 1fr); }
+  .scholarship-block { grid-template-columns: 1fr; gap: 2rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .timeline::before { left: 80px; }
   .timeline-item { grid-template-columns: 80px 20px 1fr; }
   .timeline-year { font-size: .75rem; }
+  .activity-photos { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 680px) {
-  .nav { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); padding: 1rem; z-index: 999; }
+/* ===== RWD — 手機 (≤600px) ===== */
+@media (max-width: 600px) {
+  /* 版面 */
+  .container { padding: 0 1rem; }
+  .section { padding: 3rem 0; }
+  .section-header { margin-bottom: 2rem; }
+  .section-title { font-size: 1.5rem; }
+  .section-desc { font-size: .9rem; }
+
+  /* 頂部公告 */
+  .topbar { font-size: .78rem; padding: .45rem .75rem; }
+
+  /* Header */
+  .header .container { padding-top: .6rem; padding-bottom: .6rem; }
+  .school-emblem { width: 38px; height: 38px; font-size: 1.2rem; }
+  .logo-text h1 { font-size: .85rem; }
+  .logo-text .subtitle { display: none; }
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(8px);
+    padding: 5rem 2rem 2rem;
+    z-index: 998;
+    gap: .5rem;
+    overflow-y: auto;
+  }
   .nav.open { display: flex; }
-  .nav-toggle { display: block; }
-  .hero { min-height: 70vh; }
-  .about-grid { grid-template-columns: 1fr; }
-  .join-steps { grid-template-columns: 1fr; }
-  .stats .container { grid-template-columns: repeat(2, 1fr); }
-  .footer-main { grid-template-columns: 1fr; gap: 2rem; }
-  .timeline::before { display: none; }
-  .timeline-item { grid-template-columns: auto 1fr; gap: 0 1rem; }
+  .nav a {
+    font-size: 1.1rem;
+    padding: .8rem 1rem;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+  }
+  .nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 999;
+    font-size: 1.3rem;
+    padding: .35rem .65rem;
+  }
+
+  /* Hero */
+  .hero { min-height: 60vh; }
+  .hero-content { padding: 1.5rem 1rem; }
+  .hero-badge { font-size: .72rem; padding: .3rem .9rem; margin-bottom: 1rem; }
+  .hero-content h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+  .hero-content p { font-size: .9rem; margin-bottom: 1.75rem; }
+  .hero-btns { flex-direction: column; align-items: center; gap: .75rem; }
+  .btn { padding: .75rem 1.75rem; font-size: .9rem; width: 100%; max-width: 260px; text-align: center; }
+
+  /* Stats — 2×2 格子 */
+  .stats .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .stat-item {
+    padding: 1.25rem .75rem;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) { border-bottom: none; }
+  .stat-item:nth-child(4) { border-right: none; }
+  .stat-num { font-size: 1.7rem; }
+  .stat-label { font-size: .78rem; }
+
+  /* About cards — 1 欄 */
+  .about-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .about-card { padding: 1.5rem 1.25rem; }
+  .card-icon { font-size: 2rem; }
+
+  /* Officers — 1 欄 */
+  .officers-block { padding: 1.25rem; margin-top: 2rem; }
+  .officers-grid { grid-template-columns: 1fr; gap: .75rem; }
+  .officer-card { padding: 1rem; }
+  .officer-name { font-size: 1rem; }
+  .officer-note { font-size: .78rem; }
+
+  /* Timeline — 左線靠邊 */
+  .timeline::before {
+    left: 10px;
+    background: linear-gradient(to bottom, var(--primary-light), var(--border));
+  }
+  .timeline-item {
+    grid-template-columns: 20px 1fr;
+    gap: 0 .75rem;
+    margin-bottom: 1.5rem;
+  }
   .timeline-year { display: none; }
-  .timeline-dot { left: 0; }
+  .timeline-dot { left: -4px; margin-top: .4rem; width: 12px; height: 12px; }
+  .timeline-content { padding: 1rem; }
+  .timeline-content h3 { font-size: .95rem; }
+  .timeline-content p { font-size: .83rem; }
+
+  /* Activity photos — 1 欄 */
+  .activity-photos { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .activity-photo-item img { height: 240px; }
+  .photo-caption { font-size: .78rem; }
+
+  /* News grid — 1 欄 */
+  .news-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .news-card { padding: 1.25rem; }
+
+  /* More activities */
+  .more-activities { flex-direction: column; gap: .75rem; }
+
+  /* Alumni — 1 欄 */
+  .alumni-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .alumni-card { padding: 1.25rem; }
+  .alumni-card h3 { font-size: 1.05rem; }
+  .alumni-card p { font-size: .85rem; }
+
+  /* Scholarship — 1 欄 */
+  .scholarship-block { gap: 1.5rem; }
+  .scholarship-img-placeholder { min-height: 160px; }
+
+  /* Join methods — 1 欄 */
+  .join-methods { grid-template-columns: 1fr; gap: 1rem; }
+  .join-card { padding: 1.5rem 1.25rem; }
+  .join-icon { font-size: 2rem; }
+
+  /* Contact — 全寬 */
+  .contact-grid { gap: 1.5rem; }
+  .contact-item { padding: 1rem; }
+  .contact-map iframe { height: 240px; }
+
+  /* Footer — 1 欄 */
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0 1.5rem;
+  }
+  .footer-brand { flex-direction: row; gap: .75rem; }
+  .footer-emblem { width: 40px; height: 40px; font-size: 1.2rem; }
+  .footer-brand h3 { font-size: .9rem; }
+  .footer-links h4 { font-size: .85rem; margin-bottom: .6rem; }
+  .footer-bottom { font-size: .75rem; padding: 1rem 0; }
 }
