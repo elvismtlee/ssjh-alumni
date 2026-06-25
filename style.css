@@ -647,8 +647,8 @@ body {
   .activity-photos { grid-template-columns: 1fr 1fr; }
 }
 
-/* ===== RWD — 手機 (≤600px) ===== */
-@media (max-width: 600px) {
+/* ===== RWD — 手機 (≤768px) ===== */
+@media (max-width: 768px) {
   /* 版面 */
   .container { padding: 0 1rem; }
   .section { padding: 3rem 0; }
